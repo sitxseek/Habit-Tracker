@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itp368.guo.yangzong.habit.Controller">
+   <top>
+      <VBox alignment="TOP_RIGHT">
+         <children>
+            <MenuBar fx:id="menu">
+              <menus>
+                <Menu fx:id="language" mnemonicParsing="false" text="Language">
+                  <items>
+                    <MenuItem fx:id="english" mnemonicParsing="false" onAction="#setEnglish" text="English" />
+                        <MenuItem fx:id="french" mnemonicParsing="false" onAction="#setFrench" text="French" />
+                  </items>
+                </Menu>
+                <Menu fx:id="theme" mnemonicParsing="false" text="Theme">
+                  <items>
+                    <MenuItem fx:id="light" mnemonicParsing="false" onAction="#setLightTheme" text="Light" />
+                        <MenuItem fx:id="dark" mnemonicParsing="false" onAction="#setDarkTheme" text="Dark" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="48.0">
+               <children>
+                  <Button fx:id="statsBtn" accessibleHelp="Get information about your progress" accessibleText="Statistics" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#handleButtonClick" text="Statistics" textAlignment="CENTER" underline="true" />
+                  <Label fx:id="dateLabel" text="It's Saturday, November 18">
+                     <font>
+                        <Font name="Futura Medium" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="createBtn" accessibleHelp="Create a new habit" accessibleText="Create Habit" mnemonicParsing="false" onAction="#handleButtonClick" text="Create Habit" underline="true" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TabPane accessibleHelp="Toggle between good and bad habits" accessibleText="Habits Tab" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="goodTab" text="Good Habits">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="goodHabitsList" prefHeight="267.0" prefWidth="425.0" />
+                        <VBox alignment="CENTER" layoutX="424.0" prefHeight="267.0" prefWidth="175.0" spacing="32.0">
+                           <children>
+                              <Button fx:id="goodEditBtn" accessibleHelp="Edit an existing habit" accessibleText="Edit" mnemonicParsing="false" onAction="#onEditDeleteAction" prefWidth="58.0" text="Edit" />
+                              <Button fx:id="goodDeleteBtn" accessibleHelp="Delete a habit" accessibleText="Delete" mnemonicParsing="false" onAction="#onEditDeleteAction" text="Delete" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="badTab" text="Bad Habits">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="badHabitsList" prefHeight="267.0" prefWidth="425.0" />
+                        <VBox alignment="CENTER" layoutX="424.0" prefHeight="267.0" prefWidth="175.0" spacing="32.0">
+                           <children>
+                              <Button fx:id="badEditBtn" mnemonicParsing="false" onAction="#onEditDeleteAction" prefWidth="58.0" text="Edit" />
+                              <Button fx:id="badDeleteBtn" mnemonicParsing="false" onAction="#onEditDeleteAction" text="Delete" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

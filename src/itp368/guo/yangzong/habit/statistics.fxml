@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itp368.guo.yangzong.habit.StatisticsController">
+   <center>
+      <TabPane accessibleHelp="Switch between good and bad stats" accessibleText="Stats tab" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="goodTab" text="Good Habit Stats">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" layoutX="140.0" layoutY="75.0" prefHeight="100.0" prefWidth="160.0" spacing="20.0">
+                           <children>
+                              <Label fx:id="currentLabel" accessibleText="Current Streak" text="Current Streak">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bestLabel" accessibleText="Best Streak" text="Best streak">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalLabel" accessibleText="Total perfect days" text="Total perfect days">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="338.0" layoutY="75.0" prefHeight="100.0" prefWidth="50.0" spacing="20.0">
+                           <children>
+                              <Label fx:id="currentStreak" text="Label">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bestStreak" text="Label">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalPerfect" text="Label">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Button fx:id="goodResetBtn" accessibleHelp="Reset statistics" accessibleText="Reset" layoutX="308.0" layoutY="260.0" mnemonicParsing="false" onAction="#onGoodResetAction" text="Reset">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="sinceGoodDate" layoutX="140.0" layoutY="26.0" text="Stats since date" />
+                        <Button fx:id="backBtn2" accessibleHelp="Go back to main screen" accessibleText="Back" layoutX="219.0" layoutY="260.0" mnemonicParsing="false" onAction="#onBackAction" prefWidth="72.5" text="Back">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="badTab" text="Bad Habit Stats">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="badResetBtn" accessibleHelp="Reset statistics" accessibleText="Reset" layoutX="308.0" layoutY="296.0" mnemonicParsing="false" onAction="#onBadResetAction" text="Reset">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <BarChart fx:id="barChart" layoutX="50.0" layoutY="14.0" prefHeight="260.0" prefWidth="500.0" title="Daily Averages">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="yAxis" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                        <Button fx:id="backBtn" accessibleHelp="Go back to main screen" accessibleText="Back" layoutX="219.0" layoutY="296.0" mnemonicParsing="false" onAction="#onBackAction" prefWidth="72.5" text="Back">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
