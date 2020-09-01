@@ -3,7 +3,7 @@ JavaFX GUI Project
 
 A GUI desktop application that helps you build good habits and break bad ones through self-reinforcement.
 
-[url=https://postimg.cc/crMNNVpZ][img]https://i.postimg.cc/crMNNVpZ/Screen-Shot-2020-09-01-at-4-27-19-PM.png[/img][/url]
+![alt text](https://i.postimg.cc/crMNNVpZ/Screen-Shot-2020-09-01-at-4-27-19-PM.png)
 
 [url=https://postimg.cc/zL3mK3VX][img]https://i.postimg.cc/zL3mK3VX/Screen-Shot-2020-09-01-at-4-28-02-PM.png[/img][/url]
 
