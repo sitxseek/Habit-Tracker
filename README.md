@@ -3,14 +3,13 @@ JavaFX GUI Project
 
 A GUI desktop application that helps you build good habits and break bad ones through self-reinforcement.
 
-![alt text](https://ibb.co/X862kQ3)
+![Alt text](habit1.png?raw=true "Title")
 
-![alt text](https://ibb.co/drjt8CW)
+![Alt text](habit2.png?raw=true "Title")
 
 Check your progress
 
-![alt text](https://ibb.co/SKGXXqz)
+![Alt text](habit3.png?raw=true "Title")
 
 Supports dark mode!
-
-![alt text](https://ibb.co/Z67dDpW)
+![Alt text](habit4.png?raw=true "Title")
