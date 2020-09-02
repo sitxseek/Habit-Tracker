@@ -12,4 +12,5 @@ Check your progress
 ![Alt text](habit3.png?raw=true "Title")
 
 Supports dark mode!
+
 ![Alt text](habit4.png?raw=true "Title")
